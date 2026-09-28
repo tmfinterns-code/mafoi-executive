@@ -1,0 +1,279 @@
+/* ==========================================================================
+   The Ma Foi Foundation - Corporate Design System
+   Theme: Corporate Blue & White
+   Palette:
+     - Primary Blue: #0056B3
+     - Dark Blue:    #003B73
+     - Light Blue:   #EAF4FF
+     - Surface Gray: #F8FAFC
+     - Text Primary: #212529
+     - Text Muted:   #596573
+     - White:        #FFFFFF
+   ========================================================================== */
+
+:root {
+  --mafoi-primary: #0056B3;
+  --mafoi-dark: #003B73;
+  --mafoi-light: #EAF4FF;
+  --mafoi-light-hover: #DDEBFC;
+  --mafoi-surface: #F8FAFC;
+  --mafoi-white: #FFFFFF;
+  --mafoi-text: #212529;
+  --mafoi-text-muted: #596573;
+  --mafoi-border: #D0E3F7;
+  --mafoi-border-subtle: #E2E8F0;
+  
+  --mafoi-shadow-sm: 0 2px 8px rgba(0, 59, 115, 0.05);
+  --mafoi-shadow: 0 6px 20px rgba(0, 59, 115, 0.08);
+  --mafoi-shadow-hover: 0 10px 30px rgba(0, 59, 115, 0.12);
+  --mafoi-shadow-focus: 0 0 0 0.25rem rgba(0, 86, 179, 0.2);
+  
+  --bs-primary: #0056B3;
+  --bs-primary-rgb: 0, 86, 179;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  color: var(--mafoi-text);
+  background-color: #FFFFFF;
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Offset for sticky header navigation */
+#home,
+#about-role,
+#why-join,
+#apply-section {
+  scroll-margin-top: 86px;
+}
+
+/* Typography Enhancements */
+h1, h2, h3, h4, h5, h6 {
+  color: var(--mafoi-dark);
+  font-weight: 700;
+  letter-spacing: -0.015em;
+}
+
+.lead-text {
+  font-size: 1.15rem;
+  color: var(--mafoi-text-muted);
+  line-height: 1.7;
+}
+
+/* Custom Background & Text Helpers */
+.bg-mafoi-dark {
+  background-color: var(--mafoi-dark) !important;
+}
+
+.bg-mafoi-primary {
+  background-color: var(--mafoi-primary) !important;
+}
+
+.bg-mafoi-light {
+  background-color: var(--mafoi-light) !important;
+}
+
+.bg-mafoi-surface {
+  background-color: var(--mafoi-surface) !important;
+}
+
+.text-mafoi-primary {
+  color: var(--mafoi-primary) !important;
+}
+
+.text-mafoi-dark {
+  color: var(--mafoi-dark) !important;
+}
+
+.text-mafoi-muted {
+  color: var(--mafoi-text-muted) !important;
+}
+
+/* Corporate Buttons */
+.btn-primary {
+  background-color: var(--mafoi-primary);
+  border-color: var(--mafoi-primary);
+  color: #ffffff;
+  font-weight: 600;
+  transition: all 0.2s ease-in-out;
+}
+
+.btn-primary:hover,
+.btn-primary:focus,
+.btn-primary:active {
+  background-color: var(--mafoi-dark) !important;
+  border-color: var(--mafoi-dark) !important;
+  color: #ffffff !important;
+  box-shadow: 0 4px 14px rgba(0, 59, 115, 0.25) !important;
+}
+
+.btn-outline-primary {
+  color: var(--mafoi-primary);
+  border-color: var(--mafoi-primary);
+  font-weight: 600;
+  transition: all 0.2s ease-in-out;
+}
+
+.btn-outline-primary:hover,
+.btn-outline-primary:focus {
+  background-color: var(--mafoi-light);
+  border-color: var(--mafoi-primary);
+  color: var(--mafoi-dark);
+}
+
+/* Corporate Cards */
+.mafoi-card {
+  border: 1px solid var(--mafoi-border);
+  border-radius: 12px;
+  background-color: #ffffff;
+  box-shadow: var(--mafoi-shadow-sm);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.mafoi-card:hover {
+  transform: translateY(-3px);
+  box-shadow: var(--mafoi-shadow-hover);
+  border-color: #BDD8F4;
+}
+
+.mafoi-icon-badge {
+  width: 52px;
+  height: 52px;
+  border-radius: 10px;
+  background-color: var(--mafoi-light);
+  color: var(--mafoi-primary);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.5rem;
+}
+
+/* Eyebrow Hiring Badge */
+.hiring-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  background-color: var(--mafoi-light);
+  color: var(--mafoi-dark);
+  border: 1px solid var(--mafoi-border);
+  padding: 0.35rem 0.95rem;
+  border-radius: 50rem;
+  font-size: 0.8rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+}
+
+.hiring-dot {
+  width: 8px;
+  height: 8px;
+  background-color: #198754;
+  border-radius: 50%;
+  display: inline-block;
+  box-shadow: 0 0 0 2px rgba(25, 135, 84, 0.2);
+}
+
+/* Hero Section */
+.hero-image-wrapper {
+  position: relative;
+}
+
+.hero-image {
+  width: 100%;
+  height: auto;
+  border-radius: 16px;
+  box-shadow: 0 16px 36px rgba(0, 59, 115, 0.14);
+  border: 4px solid #ffffff;
+  object-fit: cover;
+}
+
+.hero-stat-badge {
+  position: absolute;
+  bottom: -16px;
+  right: 16px;
+  background: #ffffff;
+  border: 1px solid var(--mafoi-border);
+  border-radius: 12px;
+  padding: 12px 18px;
+  box-shadow: var(--mafoi-shadow);
+}
+
+/* Form Styles */
+.form-control:focus,
+.form-select:focus {
+  border-color: var(--mafoi-primary);
+  box-shadow: var(--mafoi-shadow-focus);
+}
+
+.form-label {
+  font-weight: 600;
+  color: var(--mafoi-dark);
+  font-size: 0.95rem;
+  margin-bottom: 0.4rem;
+}
+
+.file-upload-box {
+  border: 2px dashed var(--mafoi-border);
+  border-radius: 10px;
+  background-color: #fbfdff;
+  padding: 1.5rem;
+  text-align: center;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.file-upload-box:hover,
+.file-upload-box.dragover {
+  border-color: var(--mafoi-primary);
+  background-color: var(--mafoi-light);
+}
+
+/* Character Counter */
+.char-count {
+  font-size: 0.82rem;
+  color: var(--mafoi-text-muted);
+}
+
+/* Custom Scrollbar for modern look */
+::-webkit-scrollbar {
+  width: 8px;
+}
+::-webkit-scrollbar-track {
+  background: #f1f5f9;
+}
+::-webkit-scrollbar-thumb {
+  background: #b4c7dc;
+  border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #0056B3;
+}
+
+/* Admin Modal Styles */
+.admin-modal-overlay {
+  animation: fadeIn 0.2s ease-out;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+.spin-animation {
+  animation: spin 0.8s linear infinite;
+  display: inline-block;
+}
+
+@keyframes spin {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+
+.shadow-xs {
+  box-shadow: 0 1px 3px rgba(0,0,0,0.06);
+}
